@@ -2,7 +2,7 @@
 import { test as base, expect } from '@playwright/test';
 import { LoginPage } from '../Pages/LoginPage';
 import { InventoryPage } from '../Pages/InventoryPage';
-import { CartPage } from '../pages/CartPage';
+import { CartPage } from '../Pages/CartPage';
 
 type MyFixtures = {
   loginPage: LoginPage;
