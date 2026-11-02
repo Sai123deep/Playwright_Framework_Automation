@@ -3,7 +3,7 @@ import { users } from '../test-data/users';
 
 
 
-test('Verify user can add backpack to cart', async ({
+test('Verify user can add backpack to cart @smoke @regression', async ({
   page,
   loginPage,
   inventoryPage,
