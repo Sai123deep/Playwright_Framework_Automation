@@ -1,4 +1,5 @@
 
+
 import { Page, Locator, expect } from '@playwright/test';
 
 export class CartPage {
@@ -33,7 +34,12 @@ export class CartPage {
   }
 
   async verifyProductInCart(productName: string) {
-    await expect(this.cartItem).toContainText(productName);
+    const cartItem = this.page
+      .getByTestId('inventory-item-name')
+      .filter({ hasText: productName });
+
+    await expect(cartItem).toBeVisible();
+    await expect(cartItem).toContainText(productName);
   }
 
   async proceedToCheckout() {
@@ -56,7 +62,8 @@ export class CartPage {
   }
 
   async verifyOrderConfirmation() {
-    await expect(this.confirmationMessage)
-      .toHaveText('Thank you for your order!');
+    await expect(this.confirmationMessage).toHaveText(
+      'Thank you for your order!'
+    );
   }
 }
