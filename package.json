@@ -1,11 +1,13 @@
 {
   "name": "playwright_framework_automation",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright automation framework using TypeScript",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+   "report": "npx playwright show-report"},
   "keywords": [],
-  "author": "",
+  "author": "Automation Team",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {

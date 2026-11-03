@@ -20,6 +20,6 @@ export const test = base.extend<MyFixtures>({
   cartPage: async ({ page }, use) => {
     await use(new CartPage(page));
   },
-});
+}); 
 
 export { expect };
